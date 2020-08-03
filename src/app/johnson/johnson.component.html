@@ -1,0 +1,79 @@
+<div id="tabs">
+<mat-tab-group mat-stretch-tabs  
+               class="example-stretched-tabs mat-elevation-z4"  [backgroundColor]="'accent'"  [color]="'primary'" >
+  <!-- Simple text label -->
+  <mat-tab  >
+    
+  <ng-template mat-tab-label >
+    <mat-icon color="red">school</mat-icon>
+    &nbsp;&nbsp;<b style="color:red"> My Courses</b> &nbsp;&nbsp;
+
+    </ng-template>
+  
+    
+    <ul id="myList">
+     <li *ngFor="let cls of mycourses; let i=index" id="s{{i}}"
+     (click)="onClickMe(i)">{{cls.courseName}}
+     <div id='d{{i}}' [ngStyle]="{display: showHideText(i) }">
+    <strong>Course name:&nbsp;&nbsp;</strong>{{cls.courseName}}<br>
+    <strong> Credits:&nbsp;&nbsp;</strong>{{cls.credits}}<br>
+    <strong> Description:&nbsp;&nbsp;</strong>{{cls.description}}<br><br>
+    </div>    
+    </li>
+
+    </ul>
+  </mat-tab>
+
+  <!-- Label with Icon for Personal Data-->
+
+
+
+  
+  <mat-tab>
+    
+  <ng-template mat-tab-label>
+   <mat-icon color="red">info</mat-icon>
+    &nbsp;&nbsp;<b style="color:red"> My info </b>&nbsp;&nbsp;
+   </ng-template>
+   <div id ="personal">
+    <ul style="font-weight:bold; list-style-type: none;">
+<li>Name: <b style="position:relative; left:200px;"> {{contentInfo.name}}</b></li>
+<li>StudentId:  <b style="position:relative; left:175px;"> {{contentInfo.studentId}}</b></li>
+<li>Status: <b style="position:relative; left:200px;"> {{contentInfo.status}}</b></li>
+<li>Image:   <b style="position:relative; left:205px;"><img src="{{contentInfo.imageLocation}}" width="90" height="70"></b></li>
+    </ul>
+  </div>
+  </mat-tab>  
+
+
+
+  <!-- Label with Icon for External Data View -->
+
+  <mat-tab>
+  <ng-template mat-tab-label>
+  <mat-icon color="red">commute</mat-icon>
+  &nbsp;&nbsp;<b style="color:red"> Display new/used cars</b> &nbsp;&nbsp;
+  </ng-template>
+
+
+<div id="cars">
+<button mat-raised-button [ngClass]="{buttonCSS: 'TRUE'}"
+(click)="displayJSON(1)">New Cars/Click to see myList
+<mat-icon color="primary">filter1</mat-icon>
+</button>
+<hr>
+
+
+<button mat-raised-button [ngClass]="{buttonCSS: 'TRUE'}"
+(click)="displayJSON(2)">Used Cars/Click to see myList
+<mat-icon color="primary">filter2</mat-icon>
+</button>
+</div>
+
+<div id="list">
+  <p [innerHTML]="outArea" ></p>
+</div>
+
+</mat-tab>
+</mat-tab-group>
+</div>

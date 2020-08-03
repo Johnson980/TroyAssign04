@@ -1,0 +1,40 @@
+#tabs{
+    position:relative;
+    top:200px;
+   
+}
+
+#myList{
+    
+    cursor:pointer;
+}
+
+#personal{
+    position:relative;
+    left:540px;
+    border:2px solid black;
+     border-color:blue; 
+     width:470px;
+     Background-color:#F0F8FF;
+}
+
+#cars{
+    position:relative; 
+    left:650px;
+    height:100px;
+  
+}
+
+#cars1{
+    position:relative; 
+    right:100px;
+   
+  
+}
+
+
+
+.mat-tab-label-active {
+    background-color:black;
+   
+}

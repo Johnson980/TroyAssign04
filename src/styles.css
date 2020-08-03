@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+Troy Johnson
+991-530-754
+*/
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+buttonCSS{ font-size: 1.1em; color: navy; }td { text-align: center;width: 15%; }
+
+
+#h3{
+    text-align:center;
+    position:relative; 
+    left:30px;
+}
