@@ -1,3 +1,6 @@
+//Troy Johnson
+//991-530-754
+
 import { Component } from '@angular/core';
 import {MyBio} from '../app/MyBio';
 import {CP} from './cpInterface';

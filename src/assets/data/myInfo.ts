@@ -1,3 +1,4 @@
+//Troy Johnson, 991-530-754
 import {MyBio} from "../../app/MyBio"
 
 export const MyInfo:MyBio=

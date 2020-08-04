@@ -1,3 +1,5 @@
+//Troy Johnson, 991-530-754
+
 import {Classinfo} from '../../app/Classinfo'
 
 export const MYCOURSES: Classinfo[]=
